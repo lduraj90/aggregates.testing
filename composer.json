@@ -1,0 +1,44 @@
+{
+  "name": "devkick/aggregate-testing",
+  "type": "test",
+  "keywords": [
+    "framework",
+    "slim",
+    "rest",
+    "api",
+    "service",
+    "hexagonal"
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "version": "v0.1.0",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Łukasz Duraj",
+      "email": "lukasz@devkick.pl"
+    }
+  ],
+  "require": {
+    "php": ">=7.4.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~6.4.0",
+    "mockery/mockery": "1.0.x"
+  },
+  "scripts": {
+    "test": "./bin/phpunit -c ./phpunit.xml",
+    "test:failing": "./bin/phpunit -c ./phpunit.xml --group failing",
+    "test:coverage": "./bin/phpunit -c ./phpunit.xml --coverage-html ./artifacts/coverage"
+  },
+  "autoload": {
+    "psr-4": {
+      "Devkick\\": "src/",
+      "Devkick\\Tests\\": "tests/"
+    }
+  },
+  "config": {
+    "vendor-dir": "vendor",
+    "bin-dir": "bin"
+  }
+}

@@ -1,0 +1,12 @@
+version: '2'
+services:
+  app:
+    container_name: aggregate.testing
+    build:
+      context: .
+      args:
+        xdebug: 1
+        xdebug_remote_host: "172.18.0.1"
+    volumes:
+      - ./:/app:delegated
+
